@@ -57,13 +57,11 @@ module.exports = {
       loader: 'style-loader!css-loader!autoprefixer-loader?{browsers:["last 2 version"]}'
     }, {
       test: /\.scss/,
-      loader: 'style-loader!css-loader!autoprefixer-loader?{browsers:["last 2 version"]}'
-    },
-    {
-      test:/\.json$/,
-      loader:'json-loader'
-    },
-    {
+      loader: 'style-loader!css-loader!autoprefixer-loader?{browsers:["last 2 version"]}!sass-loader?outputStyle=expanded'
+    }, {
+      test: /\.json$/,
+      loader: 'json-loader'
+    }, {
       test: /\.(png|jpg|woff|woff2)$/,
       loader: 'url-loader?limit=8192'
     }]

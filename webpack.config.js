@@ -26,7 +26,6 @@ module.exports = {
     colors: true,
     reasons: true
   },
-
   resolve: {
     extensions: ['', '.js', '.jsx'],
     alias: {
@@ -44,19 +43,17 @@ module.exports = {
     loaders: [{
       test: /\.(js|jsx)$/,
       exclude: /node_modules/,
-      loader: 'react-hot!babel-loader'
+      loader: 'react-hot!babel-loader'// transpiling compiling
     }, {
       test: /\.scss/,
-      loader: 'style-loader!css-loader!autoprefixer-loader?{browsers:["last 2 version"]}'
+      loader: 'style-loader!css-loader!autoprefixer-loader?{browsers:["last 2 version"]}!sass-loader?outputStyle=expanded'
     }, {
       test: /\.css$/,
       loader: 'style-loader!css-loader!autoprefixer-loader?{browsers:["last 2 version"]}'
-    },
-    {
-      test:/\.json$/,
-      loader:'json-loader'
-    },
-    {
+    }, {
+      test: /\.json$/,
+      loader: 'json-loader'
+    }, {
       test: /\.(png|jpg|woff|woff2)$/,
       loader: 'url-loader?limit=8192'
     }]

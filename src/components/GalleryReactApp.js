@@ -26,11 +26,11 @@ imageDatas = (function genImageURL(imageDatasArr) {
 var ImgFigure = React.createClass({
   render: function(){
     return (
-      <figure>
+      <figure className="img-firgure" >
         <img src={this.props.data.imageURL} alt={this.props.data.title}
         />
         <figcaption>
-          <h2>{this.props.data.title}</h2>
+          <h2 className="img-title">{this.props.data.title}</h2>
         </figcaption>
       </figure>
       );
